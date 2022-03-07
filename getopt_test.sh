@@ -43,7 +43,7 @@ do_init() {
 }
 
 do_getopt() {
-	argv=$(getopt --name `basename $0` --options 'c:r:l::h' --longoptions 'log::,count:,range:help' -- "$@") 2>&1
+	argv=$(getopt --name `basename $0` --options 'c:r:l::h' --longoptions 'log::,count:,range:,help' -- "$@") 2>&1
 	if [ "$?" != "0" ]; then
 		show_usage
 		exit 1
