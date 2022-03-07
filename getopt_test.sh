@@ -55,10 +55,10 @@ do_getopt() {
 		case "$1" in
 		-h|--help) show_usage; exit 0;;
 		-c|--count) HitCount=$2;  shift 2;;
-		-r|--range)	ScanRange=$2; shift 2;;
+		-r|--range) ScanRange=$2; shift 2;;
 		-l|--log)
 			case "${2,,}" in
-				"")	   LogType="ALL";    shift 2;;
+				"")    LogType="ALL";    shift 2;;
 				"txn") LogType="${2,,}"; shift 2;;
 				"poc") LogType="${2,,}"; shift 2;;
 				"gen") LogType="${2,,}"; shift 2;;
